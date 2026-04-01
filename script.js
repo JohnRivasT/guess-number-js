@@ -26,7 +26,7 @@ function mostrarMensaje(texto, color) {
 }
 
 // Prueba la función
-mostrarMensaje('¡Bienvenido al juego!', '#e94560');
+mostrarMensaje('¡Bienvenido al desafio!', '#e94560');
 
 // --- Pista de cercanía ---
 function obtenerPista(intento, secreto) {
@@ -79,14 +79,14 @@ function verificarIntento() {
 
   // Limpiar input y enfocar
   inputIntento.value = '';
-  inputIntento.focus();
+  inputIntento.focus(); 
 }
 
 // --- Conectar eventos ---
 btnAdivinar.addEventListener('click', verificarIntento);
 
 // --- Enter también funciona ---
-inputIntento.addEventListener('keypress', function(evento) {
+inputIntento.addEventListener('keydown', function(evento) {
   if (evento.key === 'Enter') {
     verificarIntento();
   }
